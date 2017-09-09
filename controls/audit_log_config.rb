@@ -85,8 +85,8 @@ end
 
 control 'windows-audit-106' do
   impact 0.1
-  title 'Configure System Event Log (Channels - Windows-WMI)'
-  describe registry_key('HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-WMI/Operational') do
+  title 'Configure System Event Log (Channels - Windows-WMI-Activity)'
+  describe registry_key('HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-WMI-Activity/Operational') do
     it { should exist }
     its('MaxSize') { should_not eq nil }
     its('MaxSize') { should >= 315801600 }
