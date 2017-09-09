@@ -34,8 +34,8 @@ control 'windows-account-100' do
   impact 1.0
   title 'Windows Remote Desktop Configured to Only Allow System Administrators Access'
   describe security_policy do
-    # verifies that only the 'Administrators' group has remote access
-    its('SeRemoteInteractiveLogonRight') { should eq ['S-1-5-32-544'] }
+    # verifies that only the 'Administrators' group has remote access or empty
+    its('SeRemoteInteractiveLogonRight') { should cmp(/(\["S-1-5-32-544"\]|\[\])/) }
   end
 end
 

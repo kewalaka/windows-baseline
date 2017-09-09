@@ -13,5 +13,11 @@ if laps_present
     describe file('c:/Program Files/CSE/AdmPwd.dll') do
       it { should be_file }
     end
-  end
+    describe registry_key('HKLM\Software\Microsoft\Policies\Microsoft Services\AdmPwd') do
+      it { should exist }
+      its('AdmPwdEnabled') { should eq 1 }
+    end
+    describe powershell('Get-AuthenticodeSignature c:\Program Files\LAPS\CSE\AdmPwd.dll') do
+      its('stdout') { should include 'Microsoft' }
+    end
 end
