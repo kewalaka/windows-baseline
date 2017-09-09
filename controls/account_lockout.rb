@@ -37,7 +37,8 @@ control 'windows-account-100' do
   # ref url: 'https://blogs.technet.microsoft.com/secguide/2014/09/02/blocking-remote-use-of-local-accounts/'
   describe security_policy do
     # verifies that only the 'Administrators' group has remote access or empty
-    its('SeRemoteInteractiveLogonRight') { should cmp(/(\["S-1-5-32-544"\]|\[\])/) }
+    #its('SeRemoteInteractiveLogonRight') { should cmp(/(\["S-1-5-32-544"\]|\[\])/) }
+    its('SeRemoteInteractiveLogonRight') { should eq ["S-1-5-32-544"] }
   end
 end
 
