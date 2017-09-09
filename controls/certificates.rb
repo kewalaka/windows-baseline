@@ -3,13 +3,18 @@
 windows_certificates_nogov = attribute('windows_certificates_nogov', default: true, description: 'Ensure no certificates from a governmental entity')
 ## from Windows Participants: https://gallery.technet.microsoft.com/Trusted-Root-Certificate-123665ca
 ## FIXME! incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT strinh)
+#  Autoridad\ Certificadora\ Raíz\ Nacional\ de\ Uruguay
+#  Certinomis\ -\ Autorité\ Racine
+#  Fotanúsítványkiadó\ -\ Kormányzati\ Hitelesítés\ Szolgáltató
+#  Government\ of\ Sweden\ (Försäkringskassan)
+#  Secrétariat\ Général\ de\ la\ Défense\ Nationale
+#  TÜBITAK\ Kamu\ SM
 windows_certificates_nogov_list = %w(
   ACCVRAIZ1
   AC\ RAIZ\ FNMT-RCM
   AC1\ RAIZ\ MTIN
   Australian\ Defence\ Organisation\ (ADO)\ Certificate\ Authority\ 02
   Australian\ Defence\ Public\ Root\ CA
-#  Autoridad\ Certificadora\ Raíz\ Nacional\ de\ Uruguay
   Autoridad\ de\ Certificacion\ de\ la\ Abogacia
   Autoridad\ de\ Certificacion\ Firmaprofesional\ CIF\ A62634068
   Autoridad\ de\ Certificacion\ Raiz\ de\ la\ Republica\ Bolivariana\ de\ Venezuela
@@ -18,7 +23,6 @@ windows_certificates_nogov_list = %w(
   Autoridade\ Certificadora\ Raiz\ Brasileira\ v2
   CCA\ India\ 2014
   CCA\ India\ 2015
-#  Certinomis\ -\ Autorité\ Racine
   Certinomis\ -\ Root\ CA
   Common\ Policy
   Correo\ Uruguayo\ -\ Root\ CA
@@ -27,9 +31,7 @@ windows_certificates_nogov_list = %w(
   ECRaizEstado
   Fabrica\ Nacional\ de\ Moneda\ y\ Timbre
   Federal\ Government\ Common\ Policy
-#  Fotanúsítványkiadó\ -\ Kormányzati\ Hitelesítés\ Szolgáltató
   Government\ of\ Netherlands\ G3
-#  Government\ of\ Sweden\ (Försäkringskassan)
   Government\ Root\ Certification\ Authority\ -\ Taiwan
   GPKI\ ApplicationCA2\ Root
   GPKIRootCA1
@@ -43,7 +45,6 @@ windows_certificates_nogov_list = %w(
   SAPO\ Class\ 2\ Root\ CA
   SAPO\ Class\ 3\ Root\ CA
   SAPO\ Class\ 4\ Root\ CA
-#  Secrétariat\ Général\ de\ la\ Défense\ Nationale
   SI-TRUST\ Root
   Staat\ der\ Nederlanden\ EV\ Root\ CA
   Staat\ der\ Nederlanden\ Root\ CA\ -\ G2
@@ -53,7 +54,6 @@ windows_certificates_nogov_list = %w(
   Swiss\ Government\ Root\ CA\ II
   Swiss\ Government\ Root\ III
   Thailand\ National\ Root\ Certification\ Authority\ -\ G1
-#  TÜBITAK\ Kamu\ SM
   TUBITAK\ Kamu\ SM\ SSL\ Kok\ Sertifikasi\ -\ Surum\ 1
   Tunisian\ Root\ Certificate\ Authority\ -\ TunRootCA2
   TW\ Government\ Root\ Certification\ Authority
