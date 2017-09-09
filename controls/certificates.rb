@@ -2,7 +2,10 @@
 
 windows_certificates_nogov = attribute('windows_certificates_nogov', default: true, description: 'Ensure no certificates from a governmental entity')
 ## from Windows Participants: https://gallery.technet.microsoft.com/Trusted-Root-Certificate-123665ca
+<<<<<<< HEAD
 ## FIXME! incompatible encoding regexp match (UTF-8 regexp with ASCII-8BIT strinh)
+=======
+>>>>>>> master
 windows_certificates_nogov_list = %w(
   ACCVRAIZ1
   AC\ RAIZ\ FNMT-RCM

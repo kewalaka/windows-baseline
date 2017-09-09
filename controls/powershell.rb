@@ -16,7 +16,7 @@ control 'powershell-module-logging' do
     it { should exist }
     its('EnableModuleLogging') { should eq 1 }
   end
-  describe registry_key('HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging \ModuleNames') do
+  describe registry_key('HKLM\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\PowerShell\ModuleLogging\ModuleNames') do
     it { should exist }
     its('*') { should eq '*' }
   end
@@ -86,7 +86,8 @@ control 'powershell-remove-v2' do
   #   its('stdout') { should_not eq '' }
   # end
   describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2') do
-    its('stdout') { should include 'Disabled' }
+    # Disabled or DisablePending
+    its('stdout') { should include 'Disable' }
   end
 #  describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2Root') do
 #    its('stdout') { should include 'Disable' }
