@@ -89,7 +89,7 @@ control 'powershell-remove-v2' do
     # Disabled or DisablePending
     its('stdout') { should include 'Disable' }
   end
-#  describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2Root') do
-#    its('stdout') { should include 'Disable' }
-#  end
+  # describe powershell('Get-WindowsOptionalFeature -Online | where FeatureName -eq MicrosoftWindowsPowerShellV2Root') do
+  #  its('stdout') { should include 'Disable' }
+  # end
 end
