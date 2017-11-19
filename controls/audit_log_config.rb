@@ -96,7 +96,17 @@ end
 control 'windows-audit-107' do
   impact 0.1
   title 'Configure System Event Log (Channels - Sysmon)'
-  describe registry_key('HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Sysmon/Operational') do
+  describe registry_key('HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-Sysmon') do
+    it { should exist }
+    its('MaxSize') { should_not eq nil }
+    its('MaxSize') { should >= 315801600 }
+  end
+end
+
+control 'windows-audit-108' do
+  impact 0.1
+  title 'Configure System Event Log (Channels - AppLocker/EXE and DLL)'
+  describe registry_key('HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-AppLocker/EXE and DLL') do
     it { should exist }
     its('MaxSize') { should_not eq nil }
     its('MaxSize') { should >= 315801600 }
