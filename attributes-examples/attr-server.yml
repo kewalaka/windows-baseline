@@ -1,0 +1,7 @@
+credentialguard_present: true
+tls12_check: true
+wsus_check: true
+laps_present: true
+sysmon_present: true
+osquery_present: true
+mbrfilter_present: false

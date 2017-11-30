@@ -1,0 +1,9 @@
+msoffice_present: true
+flash_present: true
+credentialguard_present: true
+laps_present: true
+sysmon_present: true
+osquery_present: true
+mbrfilter_present: false
+# mostly for pre-win10 environments
+emet_present: true

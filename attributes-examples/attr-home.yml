@@ -1,0 +1,4 @@
+flash_present: true
+sysmon_present: true
+osquery_present: true
+mbrfilter_present: false
