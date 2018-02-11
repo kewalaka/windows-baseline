@@ -9,7 +9,7 @@ windows_certificates_nogov = attribute('windows_certificates_nogov', default: tr
 #  Government\ of\ Sweden\ (Försäkringskassan)
 #  Secrétariat\ Général\ de\ la\ Défense\ Nationale
 #  TÜBITAK\ Kamu\ SM
-windows_certificates_nogov_list = %w(
+windows_certificates_nogov_list = %w[
   ACCVRAIZ1
   AC\ RAIZ\ FNMT-RCM
   AC1\ RAIZ\ MTIN
@@ -61,7 +61,7 @@ windows_certificates_nogov_list = %w(
   VRK\ Gov.\ Root\ CA
   VAS\ Latvijas\ Pasts\ SSI(RCA)
   VI\ Registru\ Centras
-)
+]
 
 title 'Windows Certificates store'
 
