@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 windows_services_harden = attribute('windows_services_harden', default: true, description: 'Should we ensure services hardening')
 windows_services_list = attribute(

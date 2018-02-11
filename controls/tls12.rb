@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 tls12_check = attribute('tls12_check', default: false, description: 'Should we control that TLS 1.2 Support is enabled - Ws2008+')
 

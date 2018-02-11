@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 sysmon_present = attribute('sysmon_present', default: false, description: 'Should we control presence of Microsoft sysmon')
 

@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 credentialguard_present = attribute('credentialguard_present', default: false, description: 'Should we control presence of Microsoft Win10 Credential Guard')
 

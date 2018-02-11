@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 msoffice_present = attribute('msoffice_present', default: false, description: 'Should we control presence of Microsoft msoffice')
 msoffice_version = attribute('msoffice_version', default: '16.0', description: 'Which Microsoft msoffice version do we control?')
