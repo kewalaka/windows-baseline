@@ -19,6 +19,8 @@ MethodLength:
   Max: 40
 NumericLiterals:
   MinDigits: 10
+ScriptPermission:
+  Enabled: false
 Metrics/BlockLength:
   Max: 35
 Metrics/CyclomaticComplexity:
