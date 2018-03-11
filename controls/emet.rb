@@ -13,7 +13,7 @@ if emet_present
     ref url: 'https://www.stigviewer.com/stig/windows_8_8.1/2014-06-27/finding/V-39137'
     describe processes('EMET_Service.exe') do
       its('list.length') { should eq 1 }
-      its('users') { should cmp 'SYSTEM' }
+      its('users') { should match 'SYSTEM' }
     end
     describe processes('EMET_Agent.exe') do
       its('list.length') { should eq 1 }
