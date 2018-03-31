@@ -1,5 +1,5 @@
 
-windows_suspicous_fileassoc = %w(
+windows_suspicous_fileassoc = %w[
   HKCR\htafile\shell\open\command
   HKCR\VBSFile\shell\edit\command
   HKCR\VBSFile\shell\open\command
@@ -11,7 +11,7 @@ windows_suspicous_fileassoc = %w(
   HKCR\JSEFile\shell\open\command
   HKCR\wshfile\shell\open\command
   HKCR\scriptletfile\shell\open\command
-)
+]
 
 title 'Windows Suspicious extensions'
 
