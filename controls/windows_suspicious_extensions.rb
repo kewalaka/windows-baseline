@@ -1,5 +1,19 @@
 # encoding: utf-8
 
+windows_suspicous_fileassoc = %w(
+  HKCR\htafile\shell\open\command
+  HKCR\VBSFile\shell\edit\command
+  HKCR\VBSFile\shell\open\command
+  HKCR\VBSFile\shell\open2\command
+  HKCR\VBEFile\shell\edit\command
+  HKCR\VBEFile\shell\open\command
+  HKCR\VBEFile\shell\open2\command
+  HKCR\JSFile\shell\open\command
+  HKCR\JSEFile\shell\open\command
+  HKCR\wshfile\shell\open\command
+  HKCR\scriptletfile\shell\open\command
+  )
+
 title 'Windows Suspicious extensions'
 
 control 'wsh-101' do
@@ -25,5 +39,12 @@ control 'wsh-101' do
   describe registry_key('HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\FileExts\.pif') do
     it { should exist }
     its('(Default)') { should eq '%windir%\system32\notepad.exe' }
+  end
+
+  windows_suspicous_fileassoc.each do |fileassoc|
+    describe registry_key(fileassoc.to_s) do
+      it { should exist }
+      its('(Default)') { should eq '%windir%\system32\notepad.exe' }
+    end
   end
 end
