@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 windows_suspicous_fileassoc = %w(
   HKCR\htafile\shell\open\command

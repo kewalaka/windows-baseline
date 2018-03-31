@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 osquery_present = attribute('osquery_present', default: false, description: 'Should we control presence of Facebook osquery')
 

@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 ipv6_tunnels = attribute('ipv6_tunnels', default: false, description: 'Should IPv6 tunnels be present')
 

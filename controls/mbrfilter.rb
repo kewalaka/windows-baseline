@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 mbrfilter_present = attribute('mbrfilter_present', default: false, description: 'Should we control presence of Cisco Talos mbrfilter')
 

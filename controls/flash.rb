@@ -1,4 +1,3 @@
-# encoding: utf-8
 
 flash_present = attribute('flash_present', default: false, description: 'Should we control presence of Adobe Flash hardening')
 
