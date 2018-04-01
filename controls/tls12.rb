@@ -29,12 +29,12 @@ if tls12_check
     describe registry_key('HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client') do
       it { should exist }
       its('DisabledByDefault') { should eq 0 }
-      its('Enabled') { should eq 1 }
+      its('Enabled') { should eq 0 }
     end
     describe registry_key('HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server') do
       it { should exist }
       its('DisabledByDefault') { should eq 0 }
-      its('Enabled') { should eq 1 }
+      its('Enabled') { should eq 0 }
     end
     describe registry_key('HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client') do
       it { should exist }
