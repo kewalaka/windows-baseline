@@ -5,6 +5,8 @@ msoffice_vbawarnings = attribute('msoffice_vbawarnings', default: 3, description
 
 if msoffice_present
   title 'Microsoft office'
+  # ref url: 'https://www.asd.gov.au/publications/protect/hardening-ms-office-2016.htm'
+  # ref url: 'https://www.asd.gov.au/publications/protect/ms-office-macro-security.htm'
 
   control 'msoffice-outlook-1' do
     impact 0.7
@@ -22,8 +24,6 @@ if msoffice_present
     title 'Macro settings'
     desc 'Disable Macros with notification unless signed'
     ref url: 'https://blogs.technet.microsoft.com/diana_tudor/2014/12/02/microsoft-project-how-to-control-macro-settings-using-registry-keys/'
-    ref url: 'https://www.asd.gov.au/publications/protect/hardening-ms-office-2016.htm'
-    ref url: 'https://www.asd.gov.au/publications/protect/ms-office-macro-security.htm'
     describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Word\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
