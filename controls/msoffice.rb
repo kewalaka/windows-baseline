@@ -13,7 +13,7 @@ if msoffice_present
     title 'Outlook'
     desc 'silently disable OLE Package function in Outlook'
     ref url: 'https://doublepulsar.com/oleoutlook-bypass-almost-every-corporate-security-control-with-a-point-n-click-gui-37f4cbc107d0'
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Outlook\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Outlook\\Security") do
       it { should exist }
       its('ShowOLEPackageObj') { should eq 0 }
     end
@@ -24,32 +24,32 @@ if msoffice_present
     title 'Macro settings'
     desc 'Disable Macros with notification unless signed'
     ref url: 'https://blogs.technet.microsoft.com/diana_tudor/2014/12/02/microsoft-project-how-to-control-macro-settings-using-registry-keys/'
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Word\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Word\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
       its('blockcontentexecutionfrominternet') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
       its('blockcontentexecutionfrominternet') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Powerpoint\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Powerpoint\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
       its('blockcontentexecutionfrominternet') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Access\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Access\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
       its('blockcontentexecutionfrominternet') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Publisher\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Publisher\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
       its('blockcontentexecutionfrominternet') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Visio\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Visio\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
       its('blockcontentexecutionfrominternet') { should eq 1 }
@@ -60,27 +60,27 @@ if msoffice_present
     impact 0.7
     title 'Outlook'
     desc 'Ensure protected view is enabled '
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Outlook\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Outlook\\Security") do
       it { should exist }
       its('MarkInternalAsUnsafe') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Outlook\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Outlook\\Security") do
       it { should exist }
       its('MarkInternalAsUnsafe') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Security\\ProtectedView") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Security\\ProtectedView") do
       it { should exist }
       its('DisableAttachementsInPV') { should eq 0 }
       its('DisableInternetFilesInPV') { should eq 0 }
       its('DisableUnsafeLocationsInPV') { should eq 0 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Security\\ProtectedView") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Security\\ProtectedView") do
       it { should exist }
       its('DisableAttachementsInPV') { should eq 0 }
       its('DisableInternetFilesInPV') { should eq 0 }
       its('DisableUnsafeLocationsInPV') { should eq 0 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\PowerPoint\\Security\\ProtectedView") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\PowerPoint\\Security\\ProtectedView") do
       it { should exist }
       its('DisableAttachementsInPV') { should eq 0 }
       its('DisableInternetFilesInPV') { should eq 0 }
@@ -93,7 +93,7 @@ if msoffice_present
     title 'Ms Project'
     desc 'Disable Macros with notifications'
     ref url: 'https://blogs.technet.microsoft.com/diana_tudor/2014/12/02/microsoft-project-how-to-control-macro-settings-using-registry-keys/'
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\msproject\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\msproject\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= 2 }
     end
@@ -104,19 +104,19 @@ if msoffice_present
     title 'Disable DDE functions'
     desc ''
     ref url: 'https://technet.microsoft.com/en-us/library/security/4053440'
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Options") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Options") do
       it { should exist }
       its('DontUpdateLinks') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Options\\WordMail") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Word\\Options\\WordMail") do
       it { should exist }
       its('DontUpdateLinks') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Options") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Options") do
       it { should exist }
       its('DontUpdateLinks') { should eq 1 }
     end
-    describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Security") do
+    describe registry_key("HKCU\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Excel\\Security") do
       it { should exist }
       its('WorkbookLinkWarnings') { should eq 2 }
     end
@@ -127,11 +127,11 @@ if msoffice_present
     title 'Disable Equation Editor'
     desc ''
     ref url: 'https://embedi.com/blog/skeleton-closet-ms-office-vulnerability-you-didnt-know-about'
-    describe registry_key("HKEY_LOCAL_MACHINE:\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
+    describe registry_key("HKLM\\SOFTWARE\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
       it { should exist }
       its('Compatibility Flags') { should eq 0x400 }
     end
-    describe registry_key("HKEY_LOCAL_MACHINE:\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
+    describe registry_key("HKLM\\SOFTWARE\\Wow6432Node\\Microsoft\\Office\\#{msoffice_version}\\Common\\COM Compatibility\\{0002CE02-0000- 0000-C000-000000000046}") do
       it { should exist }
       its('Compatibility Flags') { should eq 0x400 }
     end
