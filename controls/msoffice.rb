@@ -6,17 +6,6 @@ msoffice_vbawarnings = attribute('msoffice_vbawarnings', default: 3, description
 if msoffice_present
   title 'Microsoft office'
 
-  control 'msoffice-1' do
-    impact 0.7
-    title 'Ms Office'
-    desc 'Hardening of Microsoft Office, either with GPO, either registry'
-    ref url: 'https://www.asd.gov.au/publications/protect/hardening-ms-office-2016.htm'
-    ref url: 'https://www.asd.gov.au/publications/protect/ms-office-macro-security.htm'
-    describe security_policy do
-      its('SeRemoteInteractiveLogonRight') { should eq '*S-1-5-32-544' }
-    end
-  end
-
   control 'msoffice-outlook-1' do
     impact 0.7
     title 'Outlook'
@@ -33,6 +22,8 @@ if msoffice_present
     title 'Macro settings'
     desc 'Disable Macros with notification unless signed'
     ref url: 'https://blogs.technet.microsoft.com/diana_tudor/2014/12/02/microsoft-project-how-to-control-macro-settings-using-registry-keys/'
+    ref url: 'https://www.asd.gov.au/publications/protect/hardening-ms-office-2016.htm'
+    ref url: 'https://www.asd.gov.au/publications/protect/ms-office-macro-security.htm'
     describe registry_key("HKEY_CURRENT_USER:\\SOFTWARE\\Policies\\Microsoft\\Office\\#{msoffice_version}\\Word\\Security") do
       it { should exist }
       its('VBAWarnings') { should >= msoffice_vbawarnings }
