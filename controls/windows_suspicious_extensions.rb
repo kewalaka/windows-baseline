@@ -43,7 +43,7 @@ control 'wsh-101' do
   windows_suspicous_fileassoc.each do |fileassoc|
     describe registry_key(fileassoc.to_s) do
       it { should exist }
-      its('(Default)') { should eq '%windir%\system32\notepad.exe' }
+      its('(Default)') { should eq '%windir%\system32\notepad.exe %1' }
     end
   end
 end

@@ -9,12 +9,12 @@ if wsus_check
     title 'Ms WSUS'
     desc 'Microsoft WSUS configured either with GPO, either registry'
     ref url: 'https://technet.microsoft.com/en-us/library/cc708449(v=ws.10).aspx'
-    describe registry_key('HKEY_LOCAL_MACHINE:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate') do
+    describe registry_key('HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate') do
       it { should exist }
       its('WUServer') { should_not eq '' }
       its('WUStatusServer') { should_not eq '' }
     end
-    describe registry_key('HKEY_LOCAL_MACHINE:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU') do
+    describe registry_key('HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU') do
       it { should exist }
     end
   end
