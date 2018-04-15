@@ -165,7 +165,7 @@ control 'windows-audit-205' do
   desc '
     policy_path: Computer Configuration\Windows Settings\Advanced Audit Policy Configuration\Audit Policies\Account Management
   '
-  tag cis: ['windows_2012r2:17.2.2', 'windows_2016L:17.2.2']
+  tag cis: ['windows_2012r2:17.2.2', 'windows_2016L:17.2.2', 'level1']
   ref 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0'
   ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.0.0'
   describe audit_policy do
