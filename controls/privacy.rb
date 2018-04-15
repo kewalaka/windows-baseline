@@ -31,7 +31,7 @@ control 'disable-index-encrypted-files' do
   desc 'Ensure Allow indexing of encrypted files is set to Disabled'
   tag cis: ['windows_2012r2:18.9.60.2', 'windows2016:18.9.54.4', 'level1']
   ref 'CIS Microsoft Windows Server 2012 R2 Benchmark v2.3.0'
-  ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.0.0'  
+  ref 'CIS Microsoft Windows Server 2016 RTM (Release 1607) Benchmark v1.0.0'
   describe registry_key('HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search') do
     it { should exist }
     its('AllowIndexingEncryptedStoresOrItems') { should eq 0 }
