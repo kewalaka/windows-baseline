@@ -191,7 +191,7 @@ control 'cis-create-permanent-shared-objects-2.2.14' do
   end
 end
 
-control create-symbolic-links do
+control 'cis-create-symbolic-links-2.2.15' do
   impact 0.7
   title 'Configure Create symbolic links'
   tag cis: ['windows_2012r2:2.2.15', 'windows_2016:2.2.15', 'level1']
@@ -202,7 +202,7 @@ control create-symbolic-links do
   end
 end
 
-control debug-programs do
+control 'cis-debug-programs-2.2.16' do
   impact 0.7
   title 'Ensure Debug programs is set to Administrators'
   tag cis: ['windows_2012r2:2.2.16', 'windows_2016:2.2.16', 'level1']
@@ -213,7 +213,7 @@ control debug-programs do
   end
 end
 
-control deny-access-to-computer-from-network do
+control 'cis-deny-access-to-computer-from-network-2.2.17' do
   impact 0.7
   title 'Configure Deny access to this computer from the network'
   tag cis: ['windows_2012r2:2.2.17', 'windows_2016:2.2.17', 'level1']
@@ -224,7 +224,7 @@ control deny-access-to-computer-from-network do
   end
 end
 
-control deny-logon-as-batch-job do
+control 'cis-deny-logon-as-batch-job-2.2.18' do
   impact 0.7
   title 'Ensure Deny log on as a batch job to include Guests'
   tag cis: ['windows_2012r2:2.2.18', 'windows_2016:2.2.18', 'level1']
@@ -235,7 +235,7 @@ control deny-logon-as-batch-job do
   end
 end
 
-control deny-logon-as-service do
+control 'cis-deny-logon-as-service-2.2.19' do
   impact 0.7
   title 'Ensure Deny log on as a service to include Guests'
   tag cis: ['windows_2012r2:2.2.19', 'windows_2016:2.2.19', 'level1']
@@ -246,7 +246,7 @@ control deny-logon-as-service do
   end
 end
 
-control deny-logon-locally do
+control 'cis-deny-logon-locally-2.2.20' do
   impact 0.7
   title 'Ensure Deny log on locally to include Guests'
   tag cis: ['windows_2012r2:2.2.20', 'windows_2016:2.2.20', 'level1']
@@ -257,7 +257,7 @@ control deny-logon-locally do
   end
 end
 
-control deny-logon-rds do
+control 'cis-deny-logon-rds-2.2.21' do
   impact 0.7
   title 'Configure Deny log on through Remote Desktop Services'
   tag cis: ['windows_2012r2:2.2.21', 'windows_2016:2.2.21', 'level1']
@@ -268,7 +268,7 @@ control deny-logon-rds do
   end
 end
 
-control enable-accounts-trusted-for-delegation do
+control 'cis-enable-accounts-trusted-for-delegation-2.2.22' do
   impact 0.7
   title 'Configure Enable computer and user accounts to be trusted for delegation'
   tag cis: ['windows_2012r2:2.2.22', 'windows_2016:2.2.22', 'level1']
@@ -279,7 +279,7 @@ control enable-accounts-trusted-for-delegation do
   end
 end
 
-control force-shutdown-from-remote do
+control 'cis-force-shutdown-from-remote-2.2.23' do
   impact 0.7
   title 'Ensure Force shutdown from a remote system is set to Administrators '
   tag cis: ['windows_2012r2:2.2.23', 'windows_2016:2.2.23', 'level1']
@@ -290,7 +290,7 @@ control force-shutdown-from-remote do
   end
 end
 
-control generate-security-audits do
+control 'cis-generate-security-audits-2.2.24' do
   impact 0.7
   title 'Ensure Generate security audits is set to LOCAL SERVICE, NETWORK SERVICE'
   tag cis: ['windows_2012r2:2.2.24', 'windows_2016:2.2.24', 'level1']
@@ -301,7 +301,7 @@ control generate-security-audits do
   end
 end
 
-control impersonate-a-client do
+control 'cis-impersonate-a-client-2.2.25' do
   impact 0.7
   title 'Configure Impersonate a client after authentication'
   tag cis: ['windows_2012r2:2.2.25', 'windows_2016:2.2.25', 'level1']
@@ -312,7 +312,7 @@ control impersonate-a-client do
   end
 end
 
-control increase-scheduling-priority do
+control 'cis-increase-scheduling-priority-2.2.26' do
   impact 0.7
   title 'Ensure Increase scheduling priority is set to Administrators'
   tag cis: ['windows_2012r2:2.2.26', 'windows_2016:2.2.26', 'level1']
@@ -323,7 +323,7 @@ control increase-scheduling-priority do
   end
 end
 
-control load-and-unload-device-drives do
+control 'cis-load-and-unload-device-drives-2.2.27' do
   impact 0.7
   title 'Ensure Load and unload device drivers is set to Administrators'
   tag cis: ['windows_2012r2:2.2.27', 'windows_2016:2.2.27', 'level1']
@@ -334,7 +334,7 @@ control load-and-unload-device-drives do
   end
 end
 
-control lock-pages-in-memory do
+control 'cis-lock-pages-in-memory-2.2.28' do
   impact 0.7
   title 'Ensure Lock pages in memory is set to No One (Scored)'
   tag cis: ['windows_2012r2:2.2.28', 'windows_2016:2.2.28', 'level1']
@@ -345,7 +345,7 @@ control lock-pages-in-memory do
   end
 end
 
-control log-on-as-a-batch-job do
+control 'cis-log-on-as-a-batch-job-2.2.29' do
   impact 0.7
   title 'Ensure Log on as a batch job is set to Administrators (DC Only) '
   tag cis: ['windows_2012r2:2.2.29', 'windows_2016:2.2.29', 'level1']
@@ -356,7 +356,7 @@ control log-on-as-a-batch-job do
   end
 end
 
-control manage-auditing-and-security-log do
+control 'cis-manage-auditing-and-security-log-2.2.30' do
   impact 0.7
   title 'Configure Manage auditing and security log'
   tag cis: ['windows_2012r2:2.2.30', 'windows_2016:2.2.30', 'level1']
@@ -367,7 +367,7 @@ control manage-auditing-and-security-log do
   end
 end
 
-control modify-an-object-label do
+control 'cis-modify-an-object-label-2.2.31' do
   impact 0.7
   title 'Ensure Modify an object label is set to No One'
   tag cis: ['windows_2012r2:2.2.31', 'windows_2016:2.2.31', 'level1']
@@ -378,7 +378,7 @@ control modify-an-object-label do
   end
 end
 
-control modify-firmware-environment-values do
+control 'cis-modify-firmware-environment-values-2.2.32' do
   impact 0.7
   title 'Ensure Modify firmware environment values is set to Administrators'
   tag cis: ['windows_2012r2:2.2.32', 'windows_2016:2.2.32', 'level1']
@@ -389,7 +389,7 @@ control modify-firmware-environment-values do
   end
 end
 
-control perform-volume-maintenance-tasks do
+control 'cis-perform-volume-maintenance-tasks-2.2.33' do
   impact 0.7
   title 'Ensure Perform volume maintenance tasks is set to Administrators'
   tag cis: ['windows_2012r2:2.2.33', 'windows_2016:2.2.33', 'level1']
@@ -400,7 +400,7 @@ control perform-volume-maintenance-tasks do
   end
 end
 
-control profile-single-process do
+control 'cis-profile-single-process-2.2.34' do
   impact 0.7
   title 'Ensure Profile single process is set to Administrators'
   tag cis: ['windows_2012r2:2.2.34', 'windows_2016:2.2.34', 'level1']
@@ -411,7 +411,7 @@ control profile-single-process do
   end
 end
 
-control profile-system-performance do
+control 'cis-profile-system-performance-2.2.35' do
   impact 0.7
   title 'Ensure Profile system performance is set to Administrators, NT SERVICE\WdiServiceHost'
   tag cis: ['windows_2012r2:2.2.35', 'windows_2016:2.2.35', 'level1']
@@ -422,7 +422,7 @@ control profile-system-performance do
   end
 end
 
-control replace-a-process-level-token do
+control 'cis-replace-a-process-level-token-2.2.36' do
   impact 0.7
   title 'Ensure Replace a process level token is set to LOCAL SERVICE, NETWORK SERVICE'
   tag cis: ['windows_2012r2:2.2.36', 'windows_2016:2.2.36', 'level1']
@@ -433,7 +433,7 @@ control replace-a-process-level-token do
   end
 end
 
-control restore-files-and-directories do
+control 'cis-restore-files-and-directories-2.2.37' do
   impact 0.7
   title 'Ensure Restore files and directories is set to Administrators'
   tag cis: ['windows_2012r2:2.2.37', 'windows_2016:2.2.37', 'level1']
@@ -444,7 +444,7 @@ control restore-files-and-directories do
   end
 end
 
-control shutdown-the-system do
+control 'cis-shutdown-the-system-2.2.38' do
   impact 0.7
   title 'Ensure Shut down the system is set to Administrators'
   tag cis: ['windows_2012r2:2.2.38', 'windows_2016:2.2.38', 'level1']
@@ -455,7 +455,7 @@ control shutdown-the-system do
   end
 end
 
-control synchornize-directory-service-data do
+control 'cis-synchornize-directory-service-data-2.2.39' do
   impact 0.7
   title 'Ensure Synchronize directory service data is set to No One'
   tag cis: ['windows_2012r2:2.2.39', 'windows_2016:2.2.39', 'level1']
@@ -466,7 +466,7 @@ control synchornize-directory-service-data do
   end
 end
 
-control take-ownership-of-files-or-other-objects do
+control 'cis-take-ownership-of-files-or-other-objects-2.2.40' do
   impact 0.7
   title 'Ensure Take ownership of files or other objects is set to Administrators'
   tag cis: ['windows_2012r2:2.2.40', 'windows_2016:2.2.40', 'level1']
